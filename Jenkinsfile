@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = "${DOCKER_HUB_USERNAME}/cicd-demo-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         FULL_IMAGE = "${IMAGE_NAME}:${IMAGE_TAG}"
-        KUBECONFIG = '/var/lib/jenkins/.kube/config'
+        KUBECONFIG = '/home/jenkins/.jenkins/.kube/config'
     }
     stages {
         stage('Checkout') {
