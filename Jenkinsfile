@@ -62,9 +62,9 @@ pipeline {
                         --record \\
                         --kubeconfig=${KUBECONFIG} || true
  # If deployment doesn't exist, apply the manifests
-                    kubectl apply -f k8s/deployment.yaml \\
+                    kubectl apply -f kube/deployment.yaml \\
                         --kubeconfig=${KUBECONFIG}
-                    kubectl apply -f k8s/service.yaml \\
+                    kubectl apply -f kube/service.yaml \\
                         --kubeconfig=${KUBECONFIG}
                     # Force update image tag
                     kubectl set image deployment/cicd-demo-app \\
